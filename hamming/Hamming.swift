@@ -14,13 +14,13 @@ class Hamming {
             return nil
         }
         
-        var dist = 0
+        var hammingDistance = 0
         
         for index in indices(initial) {
             if initial[index] != against[index] {
-                dist++
+                hammingDistance++
             }
         }
-        return dist
+        return hammingDistance
     }
 }
