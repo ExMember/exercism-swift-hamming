@@ -14,6 +14,8 @@
 		6DFA8E851B1D1706008E11F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DFA8E841B1D1706008E11F2 /* Images.xcassets */; };
 		6DFA8E881B1D1706008E11F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DFA8E861B1D1706008E11F2 /* LaunchScreen.xib */; };
 		6DFA8E941B1D1706008E11F2 /* hammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA8E931B1D1706008E11F2 /* hammingTests.swift */; };
+		6DFA8E9E1B1D1768008E11F2 /* Hamming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA8E9D1B1D1768008E11F2 /* Hamming.swift */; };
+		6DFA8E9F1B1D1768008E11F2 /* Hamming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA8E9D1B1D1768008E11F2 /* Hamming.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		6DFA8E8D1B1D1706008E11F2 /* hammingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hammingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFA8E921B1D1706008E11F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DFA8E931B1D1706008E11F2 /* hammingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hammingTests.swift; sourceTree = "<group>"; };
+		6DFA8E9D1B1D1768008E11F2 /* Hamming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hamming.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				6DFA8E841B1D1706008E11F2 /* Images.xcassets */,
 				6DFA8E861B1D1706008E11F2 /* LaunchScreen.xib */,
 				6DFA8E791B1D1706008E11F2 /* Supporting Files */,
+				6DFA8E9D1B1D1768008E11F2 /* Hamming.swift */,
 			);
 			path = hamming;
 			sourceTree = "<group>";
@@ -216,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DFA8E801B1D1706008E11F2 /* DetailViewController.swift in Sources */,
+				6DFA8E9E1B1D1768008E11F2 /* Hamming.swift in Sources */,
 				6DFA8E7E1B1D1706008E11F2 /* MasterViewController.swift in Sources */,
 				6DFA8E7C1B1D1706008E11F2 /* AppDelegate.swift in Sources */,
 			);
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DFA8E941B1D1706008E11F2 /* hammingTests.swift in Sources */,
+				6DFA8E9F1B1D1768008E11F2 /* Hamming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
