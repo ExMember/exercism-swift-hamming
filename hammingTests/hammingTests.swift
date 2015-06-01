@@ -1,36 +1,44 @@
-//
-//  hammingTests.swift
-//  hammingTests
-//
-//  Created by Damien Burke on 6/1/15.
-//  Copyright (c) 2015 Damien Burke. All rights reserved.
-//
-
-import UIKit
 import XCTest
 
 class hammingTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testNoDifferenceBetweenEmptyStrands() {
+        let result = Hamming.compute("", against: "")!
+        let expected = 0
+        XCTAssertEqual(expected, result)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testNoDifferenceBetweenIdenticalStrands() {
+        let result = Hamming.compute("GGACTGA", against:"GGACTGA")!
+        let expected = 0
+        XCTAssertEqual(expected,result)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testCompleteHammingDistanceInSmallStrand() {
+        let result = Hamming.compute("ACT", against: "GGA")!
+        let expected = 3
+        XCTAssertEqual(expected,result)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testSmallHammingDistanceInMiddleSomewhere() {
+        let result = Hamming.compute("GGACG", against:"GGTCG")!
+        let expected = 1
+        XCTAssertEqual(expected,result)
     }
     
+    func testLargerDistance() {
+        let result = Hamming.compute("ACCAGGG", against:"ACTATGG")!
+        let expected = 2
+        XCTAssertEqual(expected,result)
+    }
+    
+    func testReturnsNilWhenOtherStrandLonger() {
+        let result = Hamming.compute("AAACTAGGGG", against:"AGGCTAGCGGTAGGAC")
+        let expected: Int? = nil
+        XCTAssertNil(result, "Different length strands return nil")
+    }
+    
+    func testReturnsNilWhenOriginalStrandLonger() {
+        let result = Hamming.compute("GACTACGGACAGGGTAGGGAAT", against:"GACATCGCACACC")
+        XCTAssertNil(result, "Different length strands return nil")
+    }
 }
